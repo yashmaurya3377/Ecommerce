@@ -25,7 +25,7 @@ const Signup = () => {
     console.log(e.target.name)
   }
   return (
-    <div className='w-full flex md:flex-row flex-col  px-5 justify-center gap-4 items-center h-full bg-[url(https://cdn.pixabay.com/photo/2018/09/21/07/07/e-commerce-3692440_1280.jpg)]  bg-center bg-cover'>
+    <div className='w-full h-[91vh]  flex md:flex-row flex-col  px-5 justify-center gap-4 items-center  bg-[url(https://cdn.pixabay.com/photo/2018/09/21/07/07/e-commerce-3692440_1280.jpg)]  bg-center bg-cover'>
 
       <div>
         <h1 style={{backgroundClip:'text'}} className='lg:text-4xl md:text-start text-center md:text-2xl text-transparent font-bold lg:w-[500px] md:w-[350px] bg-linear-to-r from-[goldenrod] to-[black]'> Exclusive Offers Await Create Your Account Today!</h1>

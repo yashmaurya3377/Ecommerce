@@ -22,8 +22,8 @@ const Login = () => {
     console.log(userDetail)
   }
   return (
-    <div className='w-full  flex flex-col lg:flex-row justify-center items-center gap-9 p-4 bg-gradient-to-br from-blue-900 to-purple-800 bg-[url("https://plus.unsplash.com/premium_photo-1728983986076-b3ce2963fc3e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixname=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] bg-center bg-cover'>
-      <div className="lg:w-1/3 w-full max-w-md text-center lg:text-left">
+    <div className='w-full h-[100vh] pt-20  flex flex-col lg:flex-row justify-center items-center gap-11  bg-gradient-to-br from-blue-900 to-purple-800 bg-[url("https://plus.unsplash.com/premium_photo-1728983986076-b3ce2963fc3e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixname=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] bg-center bg-cover'>
+      <div className="lg:w-1/3 w-full max-w-md text-center lg:text-left ">
         <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-blue-400 mb-4">
           Join now for VIP perks!
         </h2>

@@ -52,7 +52,7 @@ const Navbar = () => {
             </li>
           </ul>
           }
-          {!show && <ul className="pt-4 flex-col flex w-[200px] gap-10 items-center h-screen z-50 absolute top-0 left-0 bg-[rgb(0,0,0,0.6)] text-white">
+          {!show && <ul className="pt-4 flex-col flex w-[160px] gap-10 items-center h-screen z-50 absolute top-0 left-0 bg-[rgb(0,0,0,0.6)] text-white">
             <li> <Link to="/" className="text-2xl font-bold text-white mt-6  " >Ecommerce </Link></li>
             <li> <Link to="/" className="bg-blue-300 text-black px-3 py-1 rounded-md hover:bg-blue-600 hover:text-white" >  Home</Link></li>
             <li> <Link to="/cart" className="bg-blue-300 text-black px-3 py-1 rounded-md hover:bg-blue-600 hover:text-white" >  Cart</Link></li>
