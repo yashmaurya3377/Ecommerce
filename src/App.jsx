@@ -7,10 +7,13 @@ import Singin from './Pages/Singin'
 import Navber from './Component/Navber'
 import Viwe from './Pages/Viwe'
 import Cart from './Pages/Cart'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
     const[Cartarr,setcartarr]=useState([])
-
+    const[searchItem,setsearch]=useState("")
     function cartData(ele){
        
       // console.log(ele);
@@ -24,16 +27,19 @@ function App() {
       setcartarr(copyArr)
      
     }  
-
+    function search(searchItem){
+      console.log(searchItem);
+      setsearch(searchItem)
+    }
   return (
     <>
   <BrowserRouter> 
 
-<Navber/>
+<Navber Cartarr={Cartarr} search={search}/>
 
  
     <Routes>
-       <Route path='/' element={<Home cartData={cartData} />}/>
+       <Route path='/' element={<Home cartData={cartData} searchItem={searchItem}  />}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/Singin' element={<Singin/>}/>
       <Route path='/cart' element={<Cart Cartarr={Cartarr} />}/>
