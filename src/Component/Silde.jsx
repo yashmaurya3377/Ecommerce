@@ -45,8 +45,8 @@ const Silde = (props) => {
     <div className="slider-container  h-[300px] mt-20 ">
       <Slider {...settings}>
         {props.items.map((ele) => (
-          <Link key={ele.thumbnail} state={ele} to={"/viwe"}>
-            <img src={ele.thumbnail} alt="error" />
+          <Link key={ele.thumbnail} state={ele} to={"/viwe"} className="  ">
+            <img src={ele.thumbnail} alt="error"  />
           <h1 className="text-yellow-900 sm:text-sm font-bold">{ele.title}</h1>
           </Link>
         ))}

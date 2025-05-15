@@ -23,19 +23,22 @@ const Home = (props) => {
   useEffect(() => {
     getData();
   }, []);
-    let filteredItem = Allproducts.filter((ele) => 
-    ele.category.toLowerCase().includes(props.searchItem.toLowerCase()) || 
-    ele.title.toLowerCase().includes(props.searchItem.toLowerCase()) || 
-    ele.brand.toLowerCase().includes(props.searchItem.toLowerCase())
+
+    let filteredItem = Allproducts?.filter((ele) => 
+    ele.category.toLowerCase().includes(props.searchItem?.toLowerCase()) || 
+    ele.title.toLowerCase().includes(props.searchItem?.toLowerCase()) || 
+    ele.brand?.toLowerCase().includes(props.searchItem?.toLowerCase())
   );
   console.log(filteredItem);
   
  return (
-    <div>
-      <div className="">
+    <div >
+      {props.searchItem.length==0 &&
+        <div className="">
         <Category />
-      </div>
-      <div className="flex flex-col pt-10 md:flex-row justify-between items-center gap-3 md:gap-0">
+      </div>}
+     { props.searchItem.length==0 &&
+       <div className="flex flex-col pt-10 md:flex-row justify-between items-center gap-3 md:gap-0">
         <div className="w-full md:w-1/2 text-center md:text-left p-6 md:p-10 ">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3 md:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-pink-500">
             Ecommerce
@@ -58,11 +61,14 @@ const Home = (props) => {
           />
         </div>
       </div>
-      <div className=" overflow-hidden">
+     }
+      { props.searchItem.length==0 &&
+        <div className=" overflow-hidden">
         <Silde items={smartphone} />
         <Silde items={accessories} />
         <Silde items={furniture} />
       </div>
+      }
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 p-4">
         {filteredItem.map((ele, i) => (
           <div
