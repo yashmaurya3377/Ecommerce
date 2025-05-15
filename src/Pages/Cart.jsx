@@ -14,18 +14,14 @@ const Cart = ({ Cartarr }) => {
     })));
   }, [Cartarr]);
 
-  // Calculate subtotal before any discounts
   const subtotal = cartItems.reduce((sum, item) => sum + (item.originalPrice * item.qty), 0);
 
-  // Calculate product-level discounts
   const productDiscounts = cartItems.reduce((sum, item) => {
     return sum + (item.originalPrice * item.qty * (item.productDiscount / 100));
   }, 0);
 
-  // Calculate subtotal after product discounts
   const discountedSubtotal = subtotal - productDiscounts;
 
-  // Calculate total after all discounts and shipping
   const total = discountedSubtotal - couponDiscount + shippingFee;
 
   const handleRemove = (itemToRemove) => {
